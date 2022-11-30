@@ -1,9 +1,13 @@
 import React from 'react';
 
-const ResetButton = () => {
+interface Props {
+  onClickHandler: React.MouseEventHandler
+}
+
+const ResetButton: React.FC<Props> = (props) => {
   return (
     <div>
-      <button>Reset</button>
+      <button onClick={props.onClickHandler}>Reset</button>
     </div>
   );
 };
